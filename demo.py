@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 
-
-#import SimpleHTTPServer
-#def do_GET(self):
-#  parsed_path = urlparse.urlparse(self.path)
-#  try:
-#    params = dict([p.split('=') for p in parsed_path[4].split('&')])
-#    except:
-#        params = {}
-
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 import urlparse
 import urllib
@@ -56,8 +47,8 @@ class myHandler(BaseHTTPRequestHandler):
 <body>
  <h1>%s</h1>
  <blockquote>%s<blockquote><br>
- <iframe src="http://localhost:42000/tmux" width=80%% height=70%%></iframe><br>
- <img src="http://10.1.1.17:8080/lisa2016.png" height=5%%>
+ <iframe src="http://localhost:8081/tmux" width=90%% height=70%%></iframe><br>
+ <img src="http://localhost:8080/lisa2016.png" height=5%%>
 </body>
 </html>
 ''' % ( title, title, text ) )

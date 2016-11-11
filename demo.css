@@ -1,16 +1,24 @@
 #vt100 #cursor.bright {
   background-color: white;
   color:            black;
+  font-size: 14pt;
+  height: 16px;
 }
 
-/* #vt100 {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding: 10px;
+
+#vt100 #console, #vt100 #alt_console, #vt100 #cursor, #vt100 #lineheight {
+  font-size: 14pt;
 }
-*/
+
+#vt100 #scrollable {
+color: black;
+background-color: white;
+font-size: 14pt;
+}
+
+#vt100 #lineheight {
+height: 20px;
+}
 
 #body {
  margin-bottom: 5%;
