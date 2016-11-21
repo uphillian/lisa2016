@@ -20,9 +20,17 @@ font-size: 14pt;
 height: 20px;
 }
 
-#body {
+body {
  margin-bottom: 5%;
- height: 80%;
+ height: 70%;
+ font-family: Armata;
+ font-size: 20pt;
+}
+
+h1 {
+  font-family: Armata;
+  font-size: 36pt;
+  text-align: center;
 }
 
 #vt100 #cursor.dim {

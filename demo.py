@@ -19,7 +19,11 @@ class myHandler(BaseHTTPRequestHandler):
       path = parsed_path.path.lstrip('/')
       if os.path.exists(path):
         self.send_response(200)
-        self.send_header('Content-type','image/png')
+        if ('png' in path.split('.')[-1]):
+          self.send_header('Content-type','image/png')
+        else:
+          self.send_header('Cotnent-type','text/html')
+          
         self.end_headers()
         f = open(path,'r')
         self.wfile.write(f.read())
@@ -40,13 +44,22 @@ class myHandler(BaseHTTPRequestHandler):
     self.end_headers()
     # Send the html message
     title=urllib.unquote(params['title'])
-    text=urllib.unquote(params['text'])
+    text="<blockquote>%s</blockquote>" % urllib.unquote(params['text'])
+    try:
+        html=urllib.unquote(params['html'])
+        text=open(html,'r').read()
+    except:
+        pass
     self.wfile.write('''
 <html>
-<head><title>%s</title></head>
+<head>
+  <title>%s</title>
+  <link rel="stylesheet" href="demo.css">
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+</head>
 <body>
  <h1>%s</h1>
- <blockquote>%s<blockquote><br>
+ %s
  <iframe src="http://localhost:8081/tmux" width=90%% height=70%%></iframe><br>
  <img src="http://localhost:8080/lisa2016.png" height=5%%>
 </body>
