@@ -60,7 +60,7 @@ class myHandler(BaseHTTPRequestHandler):
 <body>
  <h1>%s</h1>
  %s
- <div id=terminal><iframe src="http://localhost:8081/tmux" width=90%% height=70%%></iframe></div>
+ <div id=terminal><iframe src="http://localhost:8081/tmux" height=75%% width=95%%></iframe></div>
  <section>
  <div id='left'><img src="http://localhost:8080/lisa2016.png" height=5%%></div>
  <div id='right'><a href="https://goo.gl/iqmPd7">https://goo.gl/iqmPd7</a></div>
