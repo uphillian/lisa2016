@@ -2,12 +2,33 @@
   background-color: white;
   color:            black;
   font-size: 14pt;
-  height: 16px;
 }
 
+div#terminal {
+  float: center;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 10%;
+}
 
 #vt100 #console, #vt100 #alt_console, #vt100 #cursor, #vt100 #lineheight {
   font-size: 14pt;
+}
+
+div#left {
+  float: left;
+  position: absolute;
+  bottom: 5;
+}
+
+div#right {
+  float: right;
+  font-size: 14pt;
+  position: absolute;
+  bottom: 5;
+  right: 5;
+  text-align: right;
 }
 
 #vt100 #scrollable {
@@ -22,9 +43,8 @@ height: 20px;
 
 body {
  margin-bottom: 5%;
- height: 70%;
  font-family: Armata;
- font-size: 20pt;
+ font-size: 16pt;
 }
 
 h1 {
