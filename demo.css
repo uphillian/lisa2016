@@ -1,7 +1,6 @@
 #vt100 #cursor.bright {
   background-color: white;
   color:            black;
-  font-size: 14pt;
 }
 
 div#terminal {
@@ -11,7 +10,7 @@ div#terminal {
 }
 
 #vt100 #console, #vt100 #alt_console, #vt100 #cursor, #vt100 #lineheight {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 div#left {
@@ -29,14 +28,23 @@ div#right {
   text-align: right;
 }
 
-#vt100 #scrollable {
-color: black;
-background-color: white;
-font-size: 14pt;
+vt100 #console, #vt100 #alt_console, #vt100 #cursor, #vt100 #lineheight {
+/*  font-family: "Courier New", "DejaVu Sans Mono", "Everson Mono", FreeMono, "Andale Mono", "Lucida Console", monospace;  */
+  font-size: 13pt;
+  line-height: 1.15;
+}
+#vt100 #cursor {
+  font-size: 13pt;
+  line-height: 1.5;
 }
 
-#vt100 #lineheight {
-height: 20px;
+#vt100 #scrollable {
+  color: black;
+  background-color: white;
+}
+
+vt100 #lineheight {
+  line-height: 1.6;
 }
 
 body {
